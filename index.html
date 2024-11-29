@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phan Trần Nhân Nghĩa</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        b {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #trollButton {
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #trollButton:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px); 
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #trollButton:active {
+            transform: translateY(2px); 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <b>Nghĩa đây hihi, muốn biết thêm về mình thì bấm vào cái bên dưới nhaa</b>
+    <button id="trollButton">Bấm vào đây nè</button>
+
+    <footer>
+        <p>&copy; 2024 NNghiaDev. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const trollButton = document.getElementById('trollButton');
+        let clickCount = 0;
+        const redirectUrl = "https://www.facebook.com/me";
+
+        trollButton.addEventListener('click', () => {
+            clickCount++;
+
+            if (clickCount < 5) {
+                const maxX = window.innerWidth - trollButton.offsetWidth;
+                const maxY = window.innerHeight - trollButton.offsetHeight;
+                const randomX = Math.random() * maxX;
+                const randomY = Math.random() * maxY;
+                trollButton.style.position = 'absolute';
+                trollButton.style.left = `${randomX}px`;
+                trollButton.style.top = `${randomY}px`;
+            } else if (clickCount === 5) {
+                trollButton.innerText = "Thôi được rồi bấm vào đây để biết người cutee nhất quả đất nèee";
+            } else {
+                window.location.href = redirectUrl;
+            }
+        });
+    </script>
+</body>
+</html>
