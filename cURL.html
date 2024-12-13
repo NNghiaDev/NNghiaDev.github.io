@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lấy Dữ Liệu Từ Pastebin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    #content {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lấy Dữ Liệu Từ Pastebin</h1>
+  <p>Đang tải nội dung từ Pastebin...</p>
+  <div id="content"></div>
+
+  <script>
+    const pasteId = 'kWqVsaUA'; 
+    const url = `https://pastebin.com/raw/${pasteId}`;
+
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'User-Agent': 'Mozilla/5.0',
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Lỗi khi lấy dữ liệu từ Pastebin');
+      }
+      return response.text();
+    })
+    .then(data => {
+      const contentDiv = document.getElementById('content');
+      contentDiv.textContent = data;
+    })
+    .catch(error => {
+      console.error('Lỗi:', error);
+      const contentDiv = document.getElementById('content');
+      contentDiv.textContent = 'Không thể lấy dữ liệu từ Pastebin. Vui lòng thử lại sau.';
+    });
+  </script>
+
+</body>
+</html>
