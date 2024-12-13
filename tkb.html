@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời Khóa Biểu</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            padding-bottom: 60px; 
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 3rem;
+            color: #76c7c0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .clock {
+            font-size: 1.5rem;
+            color: #FFFF00;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #333;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            width: 60%;
+            height: 10px;
+            background-color: #76c7c0;
+            border-radius: 5px;
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 95%;
+            margin-bottom: 40px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        th, td {
+            padding: 14px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        th {
+            background-color: #2a2a2a;
+            color: #76c7c0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #1f1f1f;
+            font-size: 1rem;
+            color: #b0b0b0;
+        }
+
+        td.break, td.meal {
+            background-color: #333;
+        }
+
+        tr:hover td {
+            background-color: #444;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .motivational-header {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            color: #76c7c0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: #76c7c0;
+            color: #121212;
+        }
+
+        .meal {
+            background-color: #3a3a3a;
+        }
+
+        .break {
+            background-color: #222;
+        }
+
+        footer {
+            background-color: #333;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 10px;
+            position: relative; 
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thời Khóa Biểu</h1>
+
+    <!-- Đồng hồ điện tử -->
+    <div class="clock" id="clock"></div>
+
+    <div class="motivational-header">
+        <p>“Vấn đề không phải là bạn có bị hạ gục hay không, mà là bạn có đứng dậy hay không.”</p>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Ngày</th>
+                    <th>6h - 12h</th>
+                    <th>12h - 12h30</th>
+                    <th>12h30 - 15h</th>
+                    <th>15h - 18h</th>
+                    <th>18h - 18h30</th>
+                    <th>18h30 - 20h30</th>
+                    <th>20h30 - 22h30</th>
+                    <th>22h30 - 6h</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="thu2">Thứ 2</td>
+                    <td class="t2-1">-</td>
+                    <td class="t2-2">Ăn trưa</td>
+                    <td class="t2-3">Học Toán</td>
+                    <td class="t2-4">-</td>
+                    <td class="t2-5">Ăn tối</td>
+                    <td class="t2-6">Học Lý</td>
+                    <td class="t2-7">Học Hóa</td>
+                    <td class="t2-8">Ngủ</td>
+                </tr>
+                <tr>
+                    <td class="thu3">Thứ 3</td>
+                    <td class="t3-1">-</td>
+                    <td class="t3-2">Ăn trưa</td>
+                    <td class="t3-3">Thư giãn</td>
+                    <td class="t3-4">-</td>
+                    <td class="t3-5">Ăn tối</td>
+                    <td class="t3-6">Học Lý</td>
+                    <td class="t3-7">Học Hóa</td>
+                    <td class="t3-8">Ngủ</td>
+                </tr>
+                <tr>
+                    <td class="thu4">Thứ 4</td>
+                    <td class="t4-1">-</td>
+                    <td class="t4-2">Ăn trưa</td>
+                    <td class="t4-3">Học Toán</td>
+                    <td class="t4-4">-</td>
+                    <td class="t4-5">Ăn tối</td>
+                    <td class="t4-6">Học Lý</td>
+                    <td class="t4-7">Học Hóa</td>
+                    <td class="t4-8">Ngủ</td>
+                </tr>
+                <tr>
+                    <td class="thu5">Thứ 5</td>
+                    <td class="t5-1">-</td>
+                    <td class="t5-2">Ăn trưa</td>
+                    <td class="t5-3">Học Toán</td>
+                    <td class="t5-4">Thư giãn</td>
+                    <td class="t5-5">Ăn tối</td>
+                    <td class="t5-6">Học Hóa</td>
+                    <td class="t5-7">Học Lý</td>
+                    <td class="t5-8">Ngủ</td>
+                </tr>
+                <tr>
+                    <td class="thu6">Thứ 6</td>
+                    <td class="t6-1">-</td>
+                    <td class="t6-2">Ăn trưa</td>
+                    <td class="t6-3">Học Toán</td>
+                    <td class="t6-4">-</td>
+                    <td class="t6-5">Ăn tối</td>
+                    <td class="t6-6">Học Lý</td>
+                    <td class="t6-7">Học Hóa</td>
+                    <td class="t6-8">Ngủ</td>
+                </tr>
+                <tr>
+                    <td class="thu7">Thứ 7</td>
+                    <td class="t7-1">-</td>
+                    <td class="t7-2">Ăn trưa</td>
+                    <td class="t7-3">Học Hóa</td>
+                    <td class="t7-4">Học Toán</td>
+                    <td class="t7-5">Ăn tối</td>
+                    <td class="t7-6">Học Lý</td>
+                    <td class="t7-7">Ôn tập || luyện đề</td>
+                    <td class="t7-8">Ngủ</td>
+                </tr>
+                <tr>
+                    <td class="chunhat">Chủ nhật</td>
+                    <td class="t8-1">Ăn sáng</td>
+                    <td class="t8-2">Ăn trưa</td>
+                    <td class="t8-3">Nghỉ trưa</td>
+                    <td class="t8-4">Luyện đề</td>
+                    <td class="t8-5">Ăn tối</td>
+                    <td class="t8-6">Ôn tập</td>
+                    <td class="t8-7">Ngủ</td>
+                    <td class="t8-8">Ngủ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>© 2024 NNghiaDev</p>
+    </footer>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padStart(2, '0');
+            var seconds = now.getSeconds().toString().padStart(2, '0');
+            var timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        function getClassForTime(day, hour, minute) {
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const dayIndex = days.indexOf(day);
+
+  if (dayIndex === -1) return null;
+
+  let timeClass = null;
+
+  if (hour >= 6 && hour < 12) {
+    timeClass = `t${dayIndex + 1}-1`;
+  } else if (hour === 12 && minute <= 30) {
+    timeClass = `t${dayIndex + 1}-2`;
+  } else if (hour > 12 && hour < 15) {
+    timeClass = `t${dayIndex + 1}-3`;
+  } else if (hour >= 15 && hour < 18) {
+    timeClass = `t${dayIndex + 1}-4`;
+  } else if (hour === 18 && minute <= 30) {
+    timeClass = `t${dayIndex + 1}-5`;
+  } else if (hour > 18 && hour < 20) {
+    timeClass = `t${dayIndex + 1}-6`;
+  } else if (hour >= 20 && hour < 22) {
+    timeClass = `t${dayIndex + 1}-7`;
+  } else if (hour >= 22 || hour < 6) {
+    timeClass = `t${dayIndex + 1}-8`;
+  }
+
+  return timeClass;
+}
+
+function updateClass() {
+  const currentDate = new Date();
+  const dayOfWeek = currentDate.toLocaleString('en-us', { weekday: 'long' });
+  const hour = currentDate.getHours();
+  const minute = currentDate.getMinutes();
+  const classForCurrentTime = getClassForTime(dayOfWeek, hour, minute);
+  const element = document.querySelector(`.${classForCurrentTime}`);
+  if (element) {
+    element.style.cssText = 'border: 2px solid rgba(255, 223, 0, 0.6); box-shadow: 0 0 5px rgba(255, 223, 0, 0.4);';
+  }
+}
+updateClass();
+setInterval(updateClass, 60000);
+    </script>
+
+</body>
+</html>
