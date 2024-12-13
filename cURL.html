@@ -29,30 +29,25 @@
   <div id="content"></div>
 
   <script>
-    const pasteId = 'kWqVsaUA'; 
-    const url = `https://pastebin.com/raw/${pasteId}`;
-
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'User-Agent': 'Mozilla/5.0',
-      }
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Lỗi khi lấy dữ liệu từ Pastebin');
-      }
-      return response.text();
-    })
-    .then(data => {
-      const contentDiv = document.getElementById('content');
-      contentDiv.textContent = data;
-    })
-    .catch(error => {
-      console.error('Lỗi:', error);
-      const contentDiv = document.getElementById('content');
-      contentDiv.textContent = 'Không thể lấy dữ liệu từ Pastebin. Vui lòng thử lại sau.';
-    });
+    const url = 'https://cors-anywhere.herokuapp.com/https://pastebin.com/raw/kWqVsaUA';
+fetch(url, {
+  method: 'GET',
+  headers: {
+    'User-Agent': 'Mozilla/5.0',
+    'Origin': 'https://pastebin.com',
+    'X-Requested-With': 'XMLHttpRequest',
+  }
+})
+.then(response => response.text())
+.then(data => {
+  const contentDiv = document.getElementById('content');
+  contentDiv.textContent = data;
+})
+.catch(error => {
+  console.error('Lỗi:', error);
+  const contentDiv = document.getElementById('content');
+  contentDiv.textContent = 'Không thể lấy dữ liệu từ Pastebin. Vui lòng thử lại sau.';
+});
   </script>
 
 </body>
