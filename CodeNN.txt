@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng kí môn thi tốt nghiệp</title>
+</head>
+<body>
+    <h1>Đăng kí môn thi tốt nghiệp</h1>
+    <form action="#" method="post">
+        <p>
+            Họ và tên: 
+            <input type="text" name="ho_va_ten" required>
+        </p>
+        <p>
+            CCCD: 
+            <input type="text" name="cccd" required>
+        </p>
+        <p>
+            Ngày sinh: 
+            <input type="date" name="ngay_sinh" required>
+        </p>
+        <p>
+            Giới tính: 
+            <input type="radio" name="gioi_tinh" value="Nam" required> Nam
+            <input type="radio" name="gioi_tinh" value="Nữ" required> Nữ
+        </p>
+        <p>
+            Môn thi: 
+            <input type="checkbox" name="mon_thi" value="Toán"> Toán
+            <input type="checkbox" name="mon_thi" value="Ngữ Văn"> Ngữ Văn
+            <input type="checkbox" name="mon_thi" value="Ngoại ngữ"> Ngoại ngữ
+        </p>
+        <p>
+            Tổ hợp: 
+            <select name="to_hop">
+                <option value="Khoa học tự nhiên">Khoa học tự nhiên</option>
+                <option value="Khoa học xã hội">Khoa học xã hội</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Gửi thông tin">
+        </p>
+    </form>
+</body>
+</html>
