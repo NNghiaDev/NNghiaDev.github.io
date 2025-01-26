@@ -1,7 +1,7 @@
 import requests,time
 #Username, Password
-username='botregpost'
-password='MatKhau123321'
+username=''
+password=''
 url_login='https://khonickgiare.vn/model/login'
 res=requests.get('https://khonickgiare.vn/tai-khoan/tai-khoan-free-fire')
 csrf_token=res.text.split('csrf_token = "')[1].split('"')[0]
