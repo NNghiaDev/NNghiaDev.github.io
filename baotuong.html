@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>       
+    <div class="container">
+        <div class="header">BÁO TƯỜNG</div> 
+        <div class="tieude"><h3 class="td">Tâm sự cuối cấp</h3>
+        <p>Những ngày cuối tháng 5, với những bạn học sinh cuối cấp lại càng trở nên đặc biệt hơn. Khoảng thời gian cuối cùng được ngồi trên ghế nhà trường, được sống trong tình yêu thương, vòng tay chở che của thầy cô, của gia đình và bè bạn. Mai này đây, khi các em bước qua cánh cửa đại học, một cuộc sống mới sẽ mở ra với nhiều khó khăn hơn. Cuộc sống xa nhà, cuộc sống tự lập ắt hẳn nhiều lúc các em sẽ ước ao được quay trở về những tháng ngày còn học phổ thông.</p>
+        </div>
+        <div class="tieude"><h3 class="td">Mùa hạ</h3>
+            <p>“Thì ra ba năm cấp 3, cái đổi lại được chỉ là một mùa hạ không có cách nào quay lại ấy”. Mùa hạ đó là những ngày mưa rào tưởng như chẳng thể ngừng rơi, là những ngày nắng rải vàng óng khiến ta ngẩn ngơ ngắm nhìn để rồi thả trôi hồn mình với bầu trời xanh biếc, là những ngày mà tâm trạng còn thay đổi “chóng mặt” hơn cả thời tiết và là những tháng năm ta không còn trẻ con nhưng cũng chưa thành người lớn - ở cái ngưỡng lưng chừng của đời người. Ngày hạ ấy dẫu khó khăn nhưng lại là khoảng thời gian rực rỡ nhất, bởi đó là khi ta phải tự học cách lớn lên, tự thay đổi chính mình.</p>
+            </div>
+        <div class="box-container">
+            <div class="box"><video width="400" height="400" autoplay muted loop>
+                <source src="video10.mp4" type="video/mp4">
+            </video>
+            </div>
+            <div class="box">
+                <div class="event-container">
+                    <div class="event-header">
+                        <select id="year">
+                            <option value="2023">Năm 2022 - 2023</option>
+                            <option value="2024">Năm 2023 - 2024</option>
+                            <option value="2025">Năm 2024 - 2025</option>
+                        </select>
+                        <select id="event">
+                            <option value="A">Sự kiện 1</option>
+                            <option value="B">Sự kiện 2</option>
+                            <option value="C">Sự kiện 3</option>
+                        </select>
+                    </div>  
+                    <div class="event-list" id="eventList"></div>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+    <footer>© 2025 NNghiaDev. All rights reserved.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
