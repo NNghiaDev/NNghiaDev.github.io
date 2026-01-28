@@ -1,0 +1,74 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+}
+.logo {
+    float: left;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.anh-lop {
+    float: right;
+    width: 80px;
+    margin-top: -70px;
+    border-radius: 10px;
+}
+.header h1 {
+    color: red;
+}
+.tieude {
+    color: blue;
+    font-weight: bold;
+}
+.khoi-anh {
+    width: 360px;
+    margin: auto;
+}
+
+.anh {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    margin: 10px;
+}
+
+.anh img {
+    width: 150px;
+    height: 120px;
+    border: 1px solid black;
+}
+.footer {
+    background-color: #00FF00;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    clear: both;
+}
+.menu {
+    background-color: #00FF00;
+    text-align: center;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+h2 {
+  margin-right: 70px;
+}
